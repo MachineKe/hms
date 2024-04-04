@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Ocean View Suite",
+    "maxcount": 2,
+    "rentperday": 250,
+    "imageurls": ["https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS1oDqc02xlU36ScNapvJJlLJGSM873C8PC3QfUkHEBBiWQEHQyPLlSZMs6_C8_,","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQHMIxw_P1bkrA290TD631QBN-zW_DWcBTH0zHeO1OignmZBaZ_bn2Q8Jx6VaLC","https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTt76eVcR7pfZXEjBa1P3NqmKHN-6BtJKoQ_GjO0L3JEDsrhNl9MitefDbNzzPr"],
+    "currentbookings": [],
+    "type": "suite",
+    "description": "Elegant suite with stunning views of the ocean."
+  },
+  {
+    "name": "Garden View Room",
+    "maxcount": 2,
+    "rentperday": 150,
+    "imageurls": ["https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQm58RQcb96tBvUblRvZYeLx6KeEewvcvllVH0ZPfDB8px8-6h95Sq3wRuUFIWP","https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSIB5VFe99OPJwySopymIJASuaHjmKDQV-LuwMnZ4qTb-AfKanxf-69doPZDzhC","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRiGvxF-FSU_cy3p7nI_HEy9uiNLKTRpaXhht9rTI-xz9-wtnzJpOt5Q70vLSpt"],
+    "currentbookings": [],
+    "type": "standard",
+    "description": "Cozy room overlooking lush green gardens."
+  },
+  {
+    "name": "Poolside Villa",
+    "maxcount": 4,
+    "rentperday": 400,
+    "imageurls": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCsby5lNZUWYcqNEbAoMGxLgMwTAy_uAR5g9OPUYXh4evoyyrpvtTGI6zM4sco","https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTFqMZmW0109mC7lqC167cbPxaEokg4yii0rBX_i9WQd9zwYhYP7AM1IxVWCXnG","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP_0396z8iLMf8dUUnNDdip3AgeYnw5pWayqz0bAyRii2s0yjFM8RSr6CUbGwq"],
+    "currentbookings": [],
+    "type": "villa",
+    "description": "Luxurious villa with direct access to the swimming pool."
+  },
+  {
+    "name": "Mountain Retreat Cabin",
+    "maxcount": 3,
+    "rentperday": 180,
+    "imageurls": ["https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR6CZM9oQ89-ebrvwIFI6al3fG0DWbxUTK40yDybrPupQ_EVdQqyf1P0ZNru2sO","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRaCL1zdB4uc9lKpheC-gqhNDBqJBnzsGWID9-LO6U7BMwqowJHH0RKEPHQ7vfy","https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQiL_VJ6OK3DEFR8c6ENfeRnbH4B2pCnkLQDbDW5pgyqFcXqY2PY2XufNcCdQZt"],
+    "currentbookings": [],
+    "type": "cabin",
+    "description": "Quaint cabin nestled in the foothills of the mountains."
+  },
+  {
+    "name": "Executive Suite",
+    "maxcount": 2,
+    "rentperday": 300,
+    "imageurls": ["https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKyBOS2NlF6DY_yRtLsQVV4rTRte-tDv3vBXHNNMAJA8vu3cjD9Q72R70qjbB7","https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRvK9Kn74L5-wqwsUkd38PWnxlmim49Q3dq4l2EFSQKDiOoSDDaRtzamRam0bXo","https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQNRmDO_hpULx1bKMigS-JJNnVyCweGQydBygibwmnBhYq0jOHOLgX2Z5SSBOP2"],
+    "currentbookings": [],
+    "type": "suite",
+    "description": "Stylish suite designed for the discerning traveler."
+  },
+  {
+    "name": "Family Bungalow",
+    "maxcount": 6,
+    "rentperday": 500,
+    "imageurls": ["https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT2SDmJ12aMqRpSEoPsmAWza2cjQ1zXySutbiKTPyXLIU2QJ0Cdy8WJVlSZbvvU","https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT2SDmJ12aMqRpSEoPsmAWza2cjQ1zXySutbiKTPyXLIU2QJ0Cdy8WJVlSZbvvU","https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTUg-16mL1NP42btpTHTKNVnpYYWReNyUXBHrzwcFXNXBxXeQppEDAEHFVMrU_P","https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSL6eeyINiWtmxFB3Sjbwa6SUwrRDelGWVqQpBBmLzeljuoqr9RbXzbvfg31kjU"],
+    "currentbookings": [],
+    "type": "bungalow",
+    "description": "Spacious bungalow ideal for large families or groups."
+  },
+  {
+    "name": "Riverside Chalet",
+    "maxcount": 2,
+    "rentperday": 280,
+    "imageurls": ["https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQty3kRvY2jG8mZuUDs9rLXi_OgmTyFiLnE8HmEQTkvI8vITydEsZP-_RosPdVS","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTYdRyf-4W-f-o_htEEOcscJDrnXgSXp0oDNHoY4B1ZnvMTM9T_4UCLycyR7ZmM","https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcToSfLbSnmZVatGm8D7W4HeblfG0sG966dv3eP6UIC58jR8mzdbxMgbqqcWh1gT"],
+    "currentbookings": [],
+    "type": "chalet",
+    "description": "Charming chalet situated by the tranquil riverside."
+  },
+  {
+    "name": "Penthouse Suite",
+    "maxcount": 4,
+    "rentperday": 600,
+    "imageurls": ["https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRcURYAbYaMVNTalGzviGgV0-iC_-QxPFR4BmVZzqXIK75DbJwfpOKO7AT3q-_7","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuxHP05ky6S_hnxQgcn3C6j8kZtKqLMypgsmZ2oCxldEI8-CYWdIEeIKjJ2ujC","https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQOEf1QWPTGrw16hDkjAugIBp5Hb7yBee3_7x1wMvOSputfdxnjAp0gzswgbRlg"],
+    "currentbookings": [],
+    "type": "suite",
+    "description": "Opulent penthouse offering unparalleled luxury and panoramic views."
+  },
+  {
+    "name": "Beachfront Villa",
+    "maxcount": 8,
+    "rentperday": 800,
+    "imageurls": ["https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQDfGM_0y7f5XR06nLMc1aRBW786fWKjyZumzacis0YmSJtxl4F0akGgZdcu-UL","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQE3dY2DwOmVZgs_7Jp7kz6voh3_soLr8C4x0JzNmLM74imyTYf_mq0aKRTzVx4","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQxmRM8pDh3Rpe3prghT9avdlRZ34xyC2wmAHDrKwO7uPLckPpXyct7ytQ-uHE3"],
+    "currentbookings": [],
+    "type": "villa",
+    "description": "Exquisite villa steps away from the sandy shores of the beach."
+  },
+  {
+    "name": "Eco-Friendly Cottage",
+    "maxcount": 2,
+    "rentperday": 120,
+    "imageurls": ["https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSdSTQRgX_qF6_G9VsA-BZm1E87HcCuOUu3qrYyKuRiI568RZz_f3ywccmR3WV_","https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR4LjBdj3H8708kJilWgNYnbcvR3elNu_dShZEJYp1ROGvJRyt164qdOAIrHfUE","https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQWwyUW4FV7qdJ0-YNgURfzP7-izMkph67v_3yDjYfppOa-Z5kVluyfzsrhKOdq"],
+    "currentbookings": [],
+    "type": "cottage",
+    "description": "Sustainable cottage nestled amidst verdant landscapes."
+  }
+]
