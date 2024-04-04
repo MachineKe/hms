@@ -4,6 +4,7 @@ import HomeScreen from "./Screens/HomeScreen";
 import BookingScreen from "./Screens/BookingScreen";
 import RegisterScreen from "./Screens/RegisterScreen";
 import LoginScreen from "./Screens/LoginScreen";
+import ProfileScreen from "./Screens/ProfileScreen";
 function App() {
   return (
     <div className="App">
@@ -11,9 +12,10 @@ function App() {
          <Routes>
         <Route path="/home" exact element={<HomeScreen />} />
         
-                  <Route path="/book/:roomid" exact element={<BookingScreen/>} />
+                  <Route path="/book/:roomid/:fromdate/:todate" exact element={<BookingScreen/>} />
         <Route path="/register" exact element={<RegisterScreen />} />
         <Route path="/login" exact element={<LoginScreen />} />
+       <Route path="profile" exact element={<ProfileScreen />} />
 
           </Routes>
     </div>

@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/home">
           5🌟HOTEL
         </a>
         <button
@@ -43,8 +43,8 @@ const Navbar = () => {
                     className="dropdown-menu"
                     aria-labelledby="dropdownMenuButton"
                   >
-                    <a className="dropdown-item" href="#">
-                      Bookings
+                    <a className="dropdown-item" href="/profile">
+                      Profile
                     </a>
                     <a className="dropdown-item" href="#" onClick={logout}>
                       Logout

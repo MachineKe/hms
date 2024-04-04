@@ -22,7 +22,7 @@ router.post('/login', async (req, res) => {
     if (user) {
       const temp = {
         name: user.name,
-        emai: user.email,
+        email: user.email,
         isAdmin: user.isAdmin,
         _id : user._id
       }
