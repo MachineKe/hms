@@ -11,10 +11,11 @@ const BookingScreen = () => {
   const [room, setRoom] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
-  const fromDateObj = dayjs(fromdate, "DD-MM-YYYY"); // Parse fromdate as dayjs object with format 'DD-MM-YYYY'
-  const toDateObj = dayjs(todate, "DD-MM-YYYY"); // Parse todate as dayjs object with format 'DD-MM-YYYY'
-  const totaldays = toDateObj.diff(fromDateObj, "day") + 1; // Calculate total days between dates
+  const fromDateObj = dayjs(fromdate, "DD-MM-YYYY");
+  const toDateObj = dayjs(todate, "DD-MM-YYYY");
+  const totaldays = toDateObj.diff(fromDateObj, "day") + 1;
   const [totalamount, settotalamount] = useState();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,20 +27,25 @@ const BookingScreen = () => {
         setRoom(data);
         setLoading(false);
       } catch (error) {
-        console.error(error);
         setLoading(false);
         setError(true);
+        console.error(error);
       }
     };
 
     fetchData();
-  }, [roomid]);
-//   useEffect(async () => {
-//     if (!localStorage.getItem('currentUser')) {
-//     window.location.reload='/login'
-//   }
-// })
-  function bookroom() {
+  }, [roomid, totaldays]); // added totaldays to the dependencies array
+
+  useEffect(() => {
+    const checkUser = async () => {
+      if (!localStorage.getItem("currentUser")) {
+        window.location.href = "/login"; // corrected the assignment of window.location.href
+      }
+    };
+    checkUser();
+  }, []);
+
+  const bookroom = () => {
     const bookingDetails = {
       room,
       userid: JSON.parse(localStorage.getItem("currentUser"))._id,
@@ -47,19 +53,20 @@ const BookingScreen = () => {
       todate: toDateObj,
       totalamount,
       totaldays,
-    }
+    };
     try {
-      setLoading(true)
-      const result = axios.post('/api/bookings/bookroom', bookingDetails)
-      setLoading(false)
-      Swal.fire('Congratulations', 'Your Room Book Successfully', 'success').then(result => {
-        window.location.href='/bookings'
-      })
+      setLoading(true);
+      const result = axios.post("/api/bookings/bookroom", bookingDetails);
+      setLoading(false);
+      Swal.fire("Congratulations", "Your Room Book Successfully", "success").then((result) => {
+        window.location.href = "/bookings";
+      });
     } catch (error) {
-      setLoading(false)
-      Swal.fire('Ooops!', 'Something went wrong', 'error')
+      setLoading(false);
+      Swal.fire("Ooops!", "Something went wrong", "error");
     }
-  }
+  };
+
   return (
     <div className="m-5">
       {loading ? (
@@ -75,7 +82,7 @@ const BookingScreen = () => {
               <h1>Booking Details</h1>
               <hr />
               <b>
-                  <p>Name : {JSON.parse(localStorage.getItem('currentUser')).name}</p>
+                <p>Name : {JSON.parse(localStorage.getItem("currentUser")).name}</p>
                 <p>From Date : {fromDateObj.format("DD-MM-YYYY")}</p>
                 <p>To Date : {toDateObj.format("DD-MM-YYYY")}</p>
                 <p>Max Count: {room.maxcount}</p>
