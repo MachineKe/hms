@@ -65,3 +65,7 @@ h2{
   text-align: center !important;
   font-weight: bold !important;
 }
+
+.dropdown-toggle {
+  border: 0px solid black !important;
+}
