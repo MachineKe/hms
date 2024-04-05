@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Tabs } from "antd";
+import { Tabs, Tag } from "antd";
 import axios from "axios";
 import Loader from "../Components/Loader";
 import Swal from "sweetalert2";
-import {Tag,Divider} from 'antd'
+
 const ProfileScreen = () => {
   const user = JSON.parse(localStorage.getItem("currentUser"));
 
@@ -16,13 +16,13 @@ const ProfileScreen = () => {
   const items = [
     {
       key: "1",
-      label: "Profile",
-      content: <MyProfile user={user} />,
+      label: "Bookings",
+      content: <MyBookings user={user} />,
     },
     {
       key: "2",
-      label: "Bookings",
-      content: <MyBookings user={user} />,
+      label: "Profile",
+      content: <MyProfile user={user} />,
     },
   ];
 
@@ -56,7 +56,8 @@ export function MyBookings({ user }) {
             userid: user._id,
           }
         );
-        setBookings(response.data);
+        const sortedBookings = response.data.sort((a, b) => new Date(b.fromdate) - new Date(a.fromdate));
+        setBookings(sortedBookings);
       } catch (error) {
         console.error("Error fetching bookings:", error);
         setError(true);
@@ -110,7 +111,11 @@ export function MyBookings({ user }) {
           </p>
           <p>
             <b>Status</b> :{" "}
-            {booking.status === "booked" ? (<Tag color="green">BOOKED</Tag>) : (<Tag color="orange">CANCELED</Tag>)}
+            {booking.status === "booked" ? (
+              <Tag color="green">BOOKED</Tag>
+            ) : (
+              <Tag color="orange">CANCELED</Tag>
+            )}
           </p>
           <div className="text-right">
             {booking.status !== "canceled" && (

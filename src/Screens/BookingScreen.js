@@ -59,7 +59,7 @@ const BookingScreen = () => {
       const result = axios.post("/api/bookings/bookroom", bookingDetails);
       setLoading(false);
       Swal.fire("Congratulations", "Your Room Book Successfully", "success").then((result) => {
-        window.location.href = "/bookings";
+        window.location.href = "/profile";
       });
     } catch (error) {
       setLoading(false);

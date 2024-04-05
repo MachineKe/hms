@@ -3,6 +3,8 @@ const router = express.Router();
 const Booking = require("../models/booking");
 const dayjs = require("dayjs");
 const Room = require("../models/room");
+
+// Route to book a room
 router.post("/bookroom", async (req, res) => {
   const { room, userid, fromdate, todate, totalamount, totaldays } = req.body;
 
@@ -26,51 +28,52 @@ router.post("/bookroom", async (req, res) => {
       userid: userid,
       status: booking.status,
     });
-    await roomtemp.save()
+    await roomtemp.save();
     res.send("Room booked successfully");
   } catch (error) {
     return res.status(400).json({ error });
   }
+});
 
-  router.post('/getbookingsbyuserid', async(req, res) => {
-    const userid = req.body.userid
-    
-    try {
-      const bookings = await Booking.find({ userid: userid })
-      res.send(bookings)
-    } catch (error) {
-      return res.status(400).json({ error })
-    }
-})
-
-
-  router.post('/cancelbooking', async(req, res) => {
+// Route to get bookings by user ID
+router.post('/getbookingsbyuserid', async(req, res) => {
+  const userid = req.body.userid;
   
-    const { bookingid, roomid } = req.body
-    
-    try {
-      const bookingitem = await Booking.findOne({ _id: bookingid })
-      bookingitem.status = 'canceled'
-await bookingitem.save()
-      const room = await Room.findOne({ _id: roomid })
-      const bookings = room.currentbookings
+  try {
+    const bookings = await Booking.find({ userid: userid });
+    res.send(bookings);
+  } catch (error) {
+    return res.status(400).json({ error });
+  }
+});
 
-      const temp = bookings.filter(booking => booking.bookingid.toString() !== bookingid)
-      room.currentbookings = temp
-
-      await room.save()
-
-res.send('Your booking canceled successfully')
-
-    } catch (error) {
-      return res.status(400).json({error})
-      
-    }
-
-
-})  
+// Route to cancel a booking
+router.post('/cancelbooking', async(req, res) => {
+  const { bookingid, roomid } = req.body;
   
+  try {
+    const bookingitem = await Booking.findOne({ _id: bookingid });
+    bookingitem.status = 'canceled';
+    await bookingitem.save();
+    const room = await Room.findOne({ _id: roomid });
+    const bookings = room.currentbookings;
+    const temp = bookings.filter(booking => booking.bookingid.toString() !== bookingid);
+    room.currentbookings = temp;
+    await room.save();
+    res.send('Your booking canceled successfully');
+  } catch (error) {
+    return res.status(400).json({ error });
+  }
+});
 
+// Route to get all bookings
+router.get('/getallbookings', async (req, res) => {
+  try {
+    const bookings = await Booking.find();
+    res.send(bookings);
+  } catch (error) {
+    return res.status(400).json({ error });
+  }
 });
 
 module.exports = router;
