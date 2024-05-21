@@ -42,5 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://hms-7w78.onrender.com"
+  "proxy": "http://localhost:5000/"
 }
